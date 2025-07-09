@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "build": "deno compile  --target aarch64-apple-darwin -o execs/converter_Mac_ARM --allow-read --allow-import --allow-write main.ts && deno compile  --target x86_64-apple-darwin -o execs/converter_Mac_Intel --allow-read --allow-import --allow-write main.ts && deno compile  --target x86_64-unknown-linux-gnu -o execs/converter_Linux_x86 --allow-read --allow-import --allow-write main.ts && deno compile  --target aarch64-unknown-linux-gnu -o execs/converter_Linux_Arm --allow-read --allow-import --allow-write main.ts && deno compile  --target x86_64-pc-windows-msvc -o execs/converter_Windows --allow-read --allow-import --allow-write main.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "xlsx": "npm:xlsx@^0.18.5"
+  }
+}
